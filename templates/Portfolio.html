@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='Portfolio.css')}}">
+    <script>
+        async function contact_me() {
+            // Get values from input fields
+            const user_name = document.getElementById('user_name').value;
+            const user_email = document.getElementById('user_email').value;
+            const user_message = document.getElementById('user_message').value;
+            
+            // Print values of input fields to console
+            console.log(user_name);
+            console.log(user_email);
+            console.log(user_message);
+
+            const response = await fetch('/contact_me', {
+                method: 'POST',
+                body: JSON.stringify({ user_name: user_name, user_email: user_email, user_message: user_message }),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+
+            const data = await response.json();
+            if (response.ok) {
+                document.getElementById('email_status_response').innerText = `Success: ${data.message}`;
+            } else {
+                document.getElementById('email_status_response').innerText = `Failure: ${data.error}`;
+            }
+            
+            // Clear input fields
+            document.getElementById('user_name').value = "";
+            document.getElementById('user_email').value = "";
+            document.getElementById('user_message').value = "";
+        }
+    </script>
+</head>
+<body>
+    <div class="topbar">
+        <nav>
+            <h2 class="logo">Portfo<span>loi</span></h2>
+            <ul id="sidemenu">
+                <li><a href="#topbar">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#about">Projects</a></li>
+                <li><a href="#about">Skils</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="content">
+             <div class="text">
+                <h3>Hello,</h3>
+                <h1>Samar <span>Emad</span></h1>
+                <h4>Frontend Developer</h4>
+                <a href='{{url_for("static", filename="imges/Samar Emad CV 2023.pdf")}}' download class="CV">DOWNLOAD CV</a>
+             </div>
+             <div class="img"><img src="{{url_for('static', filename='imges/Vector-PNG-Pic.png')}}"></div> 
+        </div>
+    </div>
+    <!-----------about---------->
+        <div id="about" class="container">
+          <div class="heder">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="{{url_for('static', filename='imges/IMG_20230329_211628_819_3-removebg-preview.png')}}">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I am a passionate and enthusiastic frontend developer with a strong interest in creating visually appealing and user-friendly websites. My journey in web development began </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('projects')">Projects</p>
+                        
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI&UX</span><br>Desingning Web/App interfaces</li>
+                            <li><span>HTML&CSS</span><br>building the structure and styling of web pages using HTML and CSS. </li>
+                            <li><span>Javascript</span><br>JavaScript is widely supported by all major web browsers and has become an essential language for web development. It continues to evolve and grow, with new features and improvements being introduced regularly.</li>
+                            <li><span>Python</span><br>Python is widely used. Its combination of simplicity, versatility, and a strong ecosystem of libraries and frameworks makes it a powerful tool for developers in different domains.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="projects">
+                        <ul>
+                            <li><span>Api</span><br><a href="https://github.com/samar4988/alx_python/tree/muster/api">Desingning Web/App interfaces</a></li>
+                            <li><span>Python - Classes and Objects</span><br><a href="https://github.com/samar4988/alx_python/tree/muster/python-classes">Web/App Development</a></li>
+                            <li><span>CSS, advanced</span><br><a href="https://github.com/samar4988/alx_html_css/tree/muster/css_advanced">Web/App Development</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+          </div>
+
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
+        </div>
+        <script>
+            var sidemenu = document.getElementById("sidemenu");
+            function openmenu(){
+                sidemenu.style.right = "0";
+            }
+            function closemenu(){
+                sidemenu.style.right = "-200px";
+            }
+        </script>
+
+        <!-----------Contact---------->
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact Me</h1>
+                        <p><img src="{{url_for('static', filename='imges/icons8-send-64.png')}}"><p style="color: white;">contact@example.com</p>
+                        <div class="social-icons">
+                            <br>
+                            <a href="https://github.com/samar4988"><img src="{{url_for('static', filename='imges/icons8-github-64.png')}}" class="git.logo"></a>
+                            <a href="https://www.linkedin.com/in/samar-emad"><img src="{{url_for('static', filename='imges/icons8-linked-in-64.png')}}" class="link.logo"></a>
+                            <a href="https://twitter.com/samarem717"><img src="{{url_for('static', filename='imges/icons8-twitter-64.png')}}" class="twit.logo"></a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-right">
+                        <div class="my_form">
+                            <input type="text" name="Name" placeholder="Your Name" id="user_name" required>
+                            <input type="email" name="email" placeholder="Your Email" id="user_email" required>
+                            <textarea name="Message" rows="6" placeholder="Your Message" id="user_message"></textarea>
+                            <button type="submit" onclick="contact_me()" class="btn btn2">Submit</button>
+                            <div id="email_status_response" style="background-color:powderblue;">
+                                
+                            </div>
+                        </div>
+                   </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p> <p style="color:white;">copyright @ Samar. Made With by Eazy Tutorials</p>
+            </div>
+        </div>
+
+   
+</body>
+</html> 

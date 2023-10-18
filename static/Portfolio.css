@@ -1,0 +1,299 @@
+*{margin: 0%; padding: 0%; font-family: sans-serif;}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: linear-gradient(black,rgb(2, 2, 49))
+}
+
+.container{
+    padding: 10px 10%;
+}
+
+.topbar{
+    width: 100%;
+    height: 100vh;
+    display: block;
+    overflow: hidden;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    width: 80%;
+}
+nav ul li {
+    display: inline-block;
+    padding: 50px;
+
+}
+nav ul li a{
+    text-decoration: none;
+    color: rgb(14, 211, 221);
+    font-weight: bold;
+    list-style: none;
+    transition: 0.5s;
+}
+nav ul li a:hover{
+    color: rgb(233, 15, 182);
+}
+.logo{
+    color: rgb(245, 247, 247);
+    font-size: 45px;
+
+}span{
+    color: #5b29f2;
+}.content{
+    margin-left: 8%;
+    margin-top: 15%;
+}.content .img img{
+    background-position:center
+    background-size:cover;
+     width:750px;
+    
+}.content .text{
+    width: 100%;
+    line-height: 64px;
+    color: aliceblue;
+}.content .text h4{
+    font-size: 23px;
+    color: aliceblue;
+    letter-spacing: 2px;
+}.content .text h1{
+    font-size: 75px;
+    letter-spacing: 1px;
+}.content .text h3{
+    font-size: 25px;
+    letter-spacing: 1px;
+}.CV{
+    text-decoration: none;
+    color: azure;
+    background-color: rgb(34, 175, 175);
+    padding: 7px 30px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 5px #000, 0px 0px 8px #858585;
+    transition: 0.5s; 
+}.CV:hover{
+    background-color: rgb(234, 22, 156);
+    outline: none;
+    border: #6a53ce 2px ;
+}.content .img{
+    width: 45%;
+    height: 80%;
+    position:absolute;
+    bottom: 10px;
+    right: 60px;
+
+}
+/*-----about-----*/
+#about{
+    padding: 90px 0;
+    color: rgb(228, 213, 213);
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+     flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 70%;
+    border-radius: 15px;
+}
+.about-col-2{
+    flex-basis: 60%;
+}
+.sub-title{
+    font-size: 40px;
+    font-weight: 600;
+    color: white;
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 50%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    color: #cc0648e9;
+    font-size: 14px;
+}
+.tab-contents{
+    display: none;
+      
+}
+.tab-contents.active-tab{
+    display: block;
+}
+.git.logo{
+    width: 40px;
+}
+
+.link.logo{
+    width: 40px;
+}
+.twit.logo{
+    width: 40px;
+}
+/*--------------contact--------*/
+
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color: wheat;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-icons{
+    margin-top: 30px;
+
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ff004f;
+    display: inline-block;
+}
+.social-icons a :hover{
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+.btn.btn2{
+    display: inline-block;
+    outline: none;
+    background: #14b8c7;
+    border-radius:20px;
+}
+.my_form{
+    width: 100%;
+}
+
+.my_form input, .my_form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #858585;
+    padding: 15px;
+    margin: 15px 0;
+    color: #140e0e;
+    font-size: 18px;
+    border-radius: 6px;
+
+}
+.my_form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #260251;
+    font-weight: 300;
+    margin-top: 20px;
+}
+/*--------css for small screens-------------*/
+nav .fas{
+    display: none;
+}
+
+@media only screen and (max-width:600px){
+    .img{
+    background-image:url(/static/imges/Vector-PNG-Pic.png);
+    }
+    .content .text{
+        margin-top: 100px;
+        font-size: 16px;
+    }
+    .content .text h1{
+        font-size: 30px;
+
+    }
+    nav .fas{
+        display: block;
+        font-size: 25px;
+    
+    }
+    nav ul {
+        background-color: #19035a;
+        position: fixed;
+        top: 0;
+        right: 0px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li {
+        display: block;
+        margin: 25px;
+
+    }
+    nav ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .sub-title{
+        font-size: 40px;
+    }
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+
+    }
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+    .about-col-2{
+        font-size: 40px;
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+
+    }
+    .contact-right, .contact-left{
+        flex-basis: 100%;
+
+    }
+    .copyright{
+        font-size: 14px;
+    }
+}
