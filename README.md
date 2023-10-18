@@ -2,7 +2,9 @@
 
 # Personal Portfolio Website 
 
-Project Description My personal portfolio
+## Project Description
+
+My personal portfolio
 
 ## Project Objective
 
@@ -38,7 +40,7 @@ For more information use the contact below;
 - **Name**: Samar Emad 
 - **Email**: samar.emad1259@gmail.com 
 
-# Work flowChart #
+## Work Flowchart 
 
 ![alt text](static/PORTFOLIO.png)
 
