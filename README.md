@@ -1,23 +1,44 @@
-<<<<<<< HEAD
 
-=======
-Project Name: Personal Portfolio Website Project Description My personal portfolio
->>>>>>> 53e5bb353ddaf25102648552f881570e92e20538
 
-Project Objective:
-The objective of the capstone project is to create a web development portfolio that demonstrates your skills, projects, and accomplishments. This portfolio will serve as a showcase of your abilities and will be a valuable asset in your web development journey. By completing the capstone project, you will have a comprehensive portfolio that reflects your progress, expertise, and readiness to take on more challenging web development projects.
+# Personal Portfolio Website 
 
-Technologies Used HTML, CSS, JavaScript, and frameworks like React for interactivity will be used. MySQL will be used for database whenever needed. Cloud hosting will be for web hosting service. Also, Git will be used for tracking changes to codebase. Roadmap and future enhancements
+Project Description My personal portfolio
 
-Roadmap Below are roadmaps for my personal portfolio website; - a) Initial Setup and Launch: b) User Experience and Design c) Content Creation and Refinement d) Analytics and Insights e) Performance Optimization Future Enhancements Below are future enhancements for my portfolio website; - a) Interactive Features b) Language and Localization c) Client or Project Management d) Accessibility e) Social Media Integration f) Mobile App g) Email Newsletter Signup
+## Project Objective
 
-Contact information For more information use the contact below; - Name: Samar Emad Email: samar.emad1259@gmail.com Github: https://github.com/samar4988 
-<<<<<<< HEAD
+The objective of the capstone project is to create a web development portfolio that demonstrates my skills, projects, and accomplishments. This portfolio will serve as a showcase of my abilities and will be a valuable asset in my web development journey. By completing the capstone project, I will have a comprehensive portfolio that reflects my progress, expertise, and readiness to take on more challenging web development projects.
+
+## Technologies 
+
+- HTML 
+- CSS 
+- JavaScript
+- Python
+- Flask
+- Git 
+
+## How to run
+
+First, you can start the local email server by running the following command:
+```
+python -m smtpd -c DebuggingServer -n localhost:1025
+```
+Then, you can start the flask server by running the following command:
+```
+python ./portfolio.py
+```  
+Finally, you can access the website on the following address:
+```
+http://127.0.0.1:5000/
+```
+
+## Contact Information
+
+For more information use the contact below; 
+- **Name**: Samar Emad 
+- **Email**: samar.emad1259@gmail.com 
 
 # Work flowChart #
 
-![alt text](PORTFOLIO.png)
+![alt text](static/PORTFOLIO.png)
 
-# Project Prototype #
-=======
->>>>>>> 53e5bb353ddaf25102648552f881570e92e20538
